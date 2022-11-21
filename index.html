@@ -10,37 +10,24 @@
 
 <body>
     <script>
-        let firstValue = prompt("taper le premier chiffre"); 
-        let a=parseInt(firstValue,10);
-        let operator = prompt("entrer votre opérateur");
-        let secondValue = prompt("taper le second chiffre");
-        let b=parseInt(secondValue,10);
+        const playerName = prompt("Entrez votre nom :");
+        const random = Math.floor(Math.random() * 100) + 1;
+        let number = prompt("Saisissez un nombre entre 1 et 100:");
+        a = parseInt(number);
+        while (a !== random) {
 
-       switch(operator){
-            case"+":
-            console.log(a+b);
-            break;
-            case"-":
-            console.log(a-b);
-            break;
-            case"*":
-            console.log(a*b);
-            break;
-            case"/":
-            console.log(a/b);
-            break;
-            default:
-            console.log("invalid operator");
+            if (random < a) {
+                alert("it is less");
+                number = prompt("Saisissez un nombre entre 1 et 100:");
+                a = parseInt(number);
+            } else {
+                alert("it is more");
+                number = prompt("Saisissez un nombre entre 1 et 100:");
+                a = parseInt(number);
+            }
 
-       }
-
-            
-     
-       
-      
-
-
-
+        }
+        alert(playerName + " wins");
     </script>
 </body>
 
