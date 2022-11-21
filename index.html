@@ -11,12 +11,20 @@
 <body>
     <script>
         let firstValue = prompt("taper le premier chiffre"); 
-        let a=parseInt(firstValue,2);
-        const operator = "+";
+        let a=parseInt(firstValue,10);
+        const operator = "-";
         let secondValue = prompt("taper le premier chiffre");
-        let b=parseInt(secondValue,2);
-        console.log(a + b);
-        
+        let b=parseInt(secondValue,10);
+
+        if (operator=== "+"){
+             console.log(a + b);
+        } else{
+            console.log (a - b);
+        }
+            
+     
+       
+      
 
 
 
