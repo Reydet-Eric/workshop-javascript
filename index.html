@@ -12,15 +12,28 @@
     <script>
         let firstValue = prompt("taper le premier chiffre"); 
         let a=parseInt(firstValue,10);
-        const operator = "-";
-        let secondValue = prompt("taper le premier chiffre");
+        let operator = prompt("entrer votre opérateur");
+        let secondValue = prompt("taper le second chiffre");
         let b=parseInt(secondValue,10);
 
-        if (operator=== "+"){
-             console.log(a + b);
-        } else{
-            console.log (a - b);
-        }
+       switch(operator){
+            case"+":
+            console.log(a+b);
+            break;
+            case"-":
+            console.log(a-b);
+            break;
+            case"*":
+            console.log(a*b);
+            break;
+            case"/":
+            console.log(a/b);
+            break;
+            default:
+            console.log("invalid operator");
+
+       }
+
             
      
        
